@@ -15,10 +15,6 @@ ESECUZIONE LOGICA:
 
 */
 
-// NOME E COGNOME //
-const nameSurname = prompt ("Benvenuto in Boolean, mi scrivi il tuo Nome e Cognome?")
-console.log (nameSurname);
-
 // KM DA PERCORRERE // 
 const userKmStr = prompt ("Quanti chilometri vuoi percorrere?")
 const userKm = parseInt (userKmStr)
@@ -31,3 +27,12 @@ console.log(userAge);
 
 
 // ESECUZIONE LOGICA // 
+const ticket = (0.21 * userKm)
+console.log(ticket);
+
+const saleTicket = (ticket * 80 ) / 100;
+console.log(saleTicket);
+
+
+
+
