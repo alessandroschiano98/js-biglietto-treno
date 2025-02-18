@@ -23,9 +23,7 @@ const userAge = parseInt(userAgeStr)
 console.log(userAge);
 
 
-// ESECUZIONE LOGICA // 
-
-
+// ESECUZIONE LOGICA //
 
 // BIGLIETTO //
 const ticket = (0.21 * userKm)
@@ -33,28 +31,31 @@ console.log(ticket);
 
 // SCONTO BIGLIETTO // 
 const saleTicketUnder18Str = (ticket * 80) / 100;
-const saleTicketUnder18 = parseInt (saleTicketUnder18Str);
+const saleTicketUnder18 = parseInt(saleTicketUnder18Str);
 console.log(saleTicketUnder18);
 
-const saleTicketOver65Str = (ticket * 60) / 100
-const saleTicketOver65 = parseint (saleTicketOver65Str);
+const saleTicketOver65Str = (ticket * 60) / 100;
+const saleTicketOver65 = parseint(saleTicketOver65Str);
 console.log(saleTicketOver65);
 
 const saleTicketAdultStr = 0;
-const saleTicketAdult = parseint (saleTicketAdultStr);
+const saleTicketAdult = parseint(saleTicketAdultStr);
 console.log(saleTicketAdult);
 
 
 // USER AGE SCONTO + SCONTO BIGLIETTO // 
-if (userAge < 18){
-    message: "Hai diritto al 20% di sconto";
+if (userAge < 18) {
     console.log(saleTicketUnder18);
 }
-else if (userAge > 65){
-    message: "Hai diritto al 40% di sconto";
+else if (userAge > 65) {
     console.log(saleTicketOver65);
 }
+else {
+    console.log
+}
 
+
+// RISPOSTE AL PROMPT userAge //
 
 
 
