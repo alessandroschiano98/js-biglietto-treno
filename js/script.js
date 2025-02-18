@@ -9,9 +9,6 @@ RACCOLTA DATI:
 - 20% sconto per i <18 (minorenni)
 - 40% per >65 (over65)
 
-- (calcolo: ticket x userKm / 100)
-
-
 */
 
 // KM DA PERCORRERE // 
@@ -58,9 +55,6 @@ else if (userAge > 65){
     console.log(saleTicketOver65);
 }
 
-else if (userAge >= 18 <= 65){
-    console.log(saleTicketAdult);
-}
 
 
 
