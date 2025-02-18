@@ -5,7 +5,7 @@ RACCOLTA DATI:
 -2)Chiedere all'utente l'età;(FATTO)
 
 // CONSIDERAZIONI: 
-- prezzo del biglietto costa 0.21€ al KM
+- prezzo del biglietto costa 0.21€ al KM (fatto)
 - 20% sconto per i <18 (minorenni)
 - 40% per >65 (over65)
 
@@ -35,8 +35,34 @@ const ticket = (0.21 * userKm)
 console.log(ticket);
 
 // SCONTO BIGLIETTO // 
-const saleTicket = (ticket * 80) / 100;
-console.log(saleTicket);
+const saleTicketUnder18Str = (ticket * 80) / 100;
+const saleTicketUnder18 = parseInt (saleTicketUnder18Str);
+console.log(saleTicketUnder18);
+
+const saleTicketOver65Str = (ticket * 60) / 100
+const saleTicketOver65 = parseint (saleTicketOver65Str);
+console.log(saleTicketOver65);
+
+const saleTicketAdultStr = 0;
+const saleTicketAdult = parseint (saleTicketAdultStr);
+console.log(saleTicketAdult);
+
+
+// USER AGE SCONTO + SCONTO BIGLIETTO // 
+if (userAge < 18){
+    message: "Hai diritto al 20% di sconto";
+    console.log(saleTicketUnder18);
+}
+else if (userAge > 65){
+    message: "Hai diritto al 40% di sconto";
+    console.log(saleTicketOver65);
+}
+
+else if (userAge >= 18 <= 65){
+    console.log(saleTicketAdult);
+}
+
+
 
 
 
