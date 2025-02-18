@@ -6,8 +6,9 @@ RACCOLTA DATI:
 
 // CONSIDERAZIONI: 
 - prezzo del biglietto costa 0.21€ al KM (fatto)
-- 20% sconto per i <18 (minorenni)
-- 40% per >65 (over65)
+- 20% sconto per i <18 (under18)
+- 40% sconto per >65 (over65)
+- 0% sconto per >18 e <65 (adulti)
 
 */
 
@@ -23,35 +24,33 @@ const userAge = parseInt(userAgeStr)
 console.log(userAge);
 
 
-// ESECUZIONE LOGICA //
-
 // BIGLIETTO //
+const baseTicketForKm = 0.21;
 const ticket = (0.21 * userKm)
 console.log(ticket);
 
-// SCONTO BIGLIETTO // 
-const saleTicketUnder18Str = (ticket * 80) / 100;
-const saleTicketUnder18 = parseFloat(saleTicketUnder18Str);
-console.log(saleTicketUnder18);
-
-const saleTicketOver65Str = (ticket * 60) / 100;
-const saleTicketOver65 = parseFloat(saleTicketOver65Str);
-console.log(saleTicketOver65);
-
-const saleTicketAdultStr = null;
-const saleTicketAdult = parseFloat(saleTicketAdultStr);
-console.log(saleTicketAdult);
-
+// ESECUZIONE LOGICA //
 
 // USER AGE SCONTO + SCONTO BIGLIETTO // 
+let saleTicket = 0; /* QUESTO INCLUDE AUTOMATICAMENTE ELSE */
 if (userAge < 18) {
-    console.log(saleTicketUnder18);
+    saleTicket = 20;
 }
 else if (userAge > 65) {
-    console.log(saleTicketOver65);
+    saleTicket = 40;
 }
 
-let mess
+/* SI AGGIUNGE Else finale solo nel momento in cui c'è una condizione che non vi è inclusa nelle altre 2 */
+
+
+// SCONTO BIGLIETTO // 
+const finalPrice = baseTicketForKm - (baseTicketForKm * saleTicket / 100)
+
+// MESSAGGIO SCONTO //
+const message = `Il prezzo base è €${baseTicketForKm.toFixed(2)}. Visto che il passeggero ha ${userAge} anni, hai il diritto allo sconto ${saleTicket}%. Quindi il prezzo finale è €${finalPrice.toFixed(2)}`
+
+
+
 
 
 
