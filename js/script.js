@@ -31,15 +31,15 @@ console.log(ticket);
 
 // SCONTO BIGLIETTO // 
 const saleTicketUnder18Str = (ticket * 80) / 100;
-const saleTicketUnder18 = parseInt(saleTicketUnder18Str);
+const saleTicketUnder18 = parseFloat(saleTicketUnder18Str);
 console.log(saleTicketUnder18);
 
 const saleTicketOver65Str = (ticket * 60) / 100;
-const saleTicketOver65 = parseint(saleTicketOver65Str);
+const saleTicketOver65 = parseFloat(saleTicketOver65Str);
 console.log(saleTicketOver65);
 
-const saleTicketAdultStr = 0;
-const saleTicketAdult = parseint(saleTicketAdultStr);
+const saleTicketAdultStr = null;
+const saleTicketAdult = parseFloat(saleTicketAdultStr);
 console.log(saleTicketAdult);
 
 
@@ -50,12 +50,8 @@ if (userAge < 18) {
 else if (userAge > 65) {
     console.log(saleTicketOver65);
 }
-else {
-    console.log
-}
 
-
-// RISPOSTE AL PROMPT userAge //
+let mess
 
 
 
